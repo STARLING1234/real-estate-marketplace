@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.register-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #eef2ff, #dbeafe);
+  padding: 20px;
+}
+
+.register-card {
+  width: 100%;
+  max-width: 420px;
+  background: #ffffff;
+  padding: 35px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.register-card h2 {
+  text-align: center;
+  color: #1f2937;
+  margin-bottom: 8px;
+  font-size: 28px;
+}
+
+/* Keeps the sub-header text centered and gray, ignoring error elements */
+.register-card p:not(.error) {
+  text-align: center;
+  color: #6b7280;
+  margin-bottom: 22px;
+}
+
+.register-card form {
+  display: flex;
+  flex-direction: column;
+}
+
+.register-card input {
+  width: 100%;
+  padding: 13px;
+  margin-bottom: 15px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 15px;
+  outline: none;
+  transition: 0.3s ease;
+}
+
+.register-card input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 5px rgba(37, 99, 235, 0.3);
+}
+
+/* Explicitly overrides parent styling to force a clean red font */
+.register-card p.error {
+  color: #ef4444; 
+  font-size: 13px;
+  font-weight: 600;
+  margin-top: -10px;
+  margin-bottom: 12px;
+  text-align: left;
+}
+
+.register-card button {
+  width: 100%;
+  padding: 13px;
+  border: none;
+  border-radius: 8px;
+  background: #2563eb;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.register-card button:hover {
+  background: #1d4ed8;
+}
+
+.register-card button:disabled {
+  background: #93c5fd;
+  cursor: not-allowed;
+}
+
+.bottom-text {
+  text-align: center;
+  margin-top: 18px;
+  font-size: 15px;
+}
+
+.bottom-text span {
+  color: #2563eb;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.bottom-text span:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 480px) {
+  .register-card {
+    padding: 25px;
+  }
+
+  .register-card h2 {
+    font-size: 24px;
+  }
+
+  .register-card input,
+  .register-card button {
+    font-size: 14px;
+  }
+}

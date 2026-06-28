@@ -3,6 +3,8 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/LayoutComponent/Header/Header.jsx';
 import Footer from './components/LayoutComponent/Footer/Footer.jsx';
 import Loader from './components/Loader.jsx';
+import Login from "./Pages/Login/Login.jsx";
+import Register from "./Pages/Register/Register.jsx";
 
 // Code Splitting with lazy imports
 const Home = lazy(() => import('./Pages/Home/index.jsx'));
@@ -23,6 +25,8 @@ const App = () => {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/property/:id" element={<PropertyDetails />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/register" element={<Register />} />
             </Routes>
           </Suspense>
         </main>
